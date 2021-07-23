@@ -1,54 +1,60 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-  html {
-    // mobile
-    --font-size-: 0.7rem;
+  html {    
+    --color-primary: #E1817C;
+    --color-bg-gray: #808080;
 
-    --icon-size: 45px;
-    --gap-width: 0.5rem;
-    --col-height: 100%;
-  
-    --section-gap-s: 0.5rem;
-    --section-gap-m: 1rem;
-    --section-gap-l: 2rem;
+    --color-text: #22262F;
+    --color-text-details: #a9615d;
+    --color-text-inverse: white;
+
+    --color-border: #DCDEE0;
+    --color-border-light: hsl(0, 0%, 67%, 0.3);
+    --color-shadow: hsl(6, 0%, 92%);
+    --color-primary-hover: #79a102;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-4xl: 2.25rem;
+
+    --spacing-xs: .25rem;
+    --spacing-sm: .5rem;
+    --spacing-base: 1rem;
+    --spacing-m: 1.5rem;
+    --spacing-l: 2rem;
+
+    // mobile
 
 
     // tablet
     @media (min-width: 768px) {
-      --font-size: 1rem;
-      --icon-size: 60px;
     }
 
     // horizontal tablet
     @media (min-width: 1024px) {
-      --font-size: 0.7rem;
-      --icon-size: 30px;
-      --gap-width: 0.5rem;
-      --col-height: 35rem;
     }
 
     // laptop
     @media (min-width: 1200px) {
-      --icon-size: 36px;
-      --gap-width: 0.5rem;
-      --col-height: 31rem;
     }
 
     // desktop
     @media (min-width: 1600px) {
-      --icon-size: 36px;
-      --col-height: 40rem;
     }
   }
 
   html,
   body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	  font-size: 16px;
 	  font-weight: 400;
-    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, p { max-width: 70ch; }
