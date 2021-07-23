@@ -1,8 +1,19 @@
 import styled from 'styled-components'
 
+import Navbar from '../components/navbar/Navbar'
+import ClientCard from '../components/clientCard/ClientCard'
+
 export default function Home({ client }) {
-  console.log(client)
-  return <h1>My page</h1>
+  const clientInfo = client.client
+  const initials = clientInfo.first_name[0] + clientInfo.last_name[0]
+  
+
+  return (
+    <>
+      <Navbar initials={initials} />
+      <ClientCard client={client} />
+    </>
+  )
 }
 
 export async function getStaticProps() {
