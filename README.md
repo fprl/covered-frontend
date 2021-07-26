@@ -16,9 +16,9 @@ Deisgn prototypes:
 
 * [User card desktop-prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/NjbIBXBjR)
 
-* [Reservation prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE)
+* [Reservation prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE) - just an idea to show the offer for up-sell and a possible layout for a booking information page.
 
-* [Framer file with options](https://framer.com/projects/covered-frontend--PHpWlGWg0EqwOqFUhEJe-954bw)
+* [Framer file](https://framer.com/projects/covered-frontend--PHpWlGWg0EqwOqFUhEJe-954bw) - check the different options!
 
 Code:
 
