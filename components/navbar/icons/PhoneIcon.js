@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const PhoneIcon = () => {
   return (
@@ -18,5 +18,10 @@ const Svg = styled.svg`
   width: 26px;
   height: 26px;
 
-  color: var(--color-bg-gray)
+  color: var(--color-bg-gray);
+
+  @media screen and (min-width: 1024px) {
+    width: 1rem;
+    height: 1rem;
+  } ;
 `
