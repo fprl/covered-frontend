@@ -1,41 +1,38 @@
 import styled from 'styled-components'
 
-import { Flex } from '../styled/lib'
-
-/* <Avatar
-  image={Screenshot+2021-03-17+at+16.49.32.png&preferredSize=small}
-  initials="HC"
-  online={false}
-  variant="v8cmkjf8R"
-  background="var(--Primary, rgb(225, 129, 124))"
-  outline={false}
-*/
-
 const Avatar = ({ initials }) => {
   return (
-    <Container>
+    <Button>
       <Initials>{initials}</Initials>
-    </Container>
+    </Button>
   )
 }
 
 export default Avatar
 
-const Container = styled.div`
+const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 
   background-color: var(--color-primary);
 
+  border: transparent;
   border-radius: 50%;
+
+  padding: 0;
 
   :hover {
     opacity: 0.7;
   }
+
+  @media screen and (min-width: 1024px) {
+    width: 1.5rem;
+    height: 1.5rem;
+  };
 `
 
 const Initials = styled.span`
