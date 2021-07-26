@@ -1,84 +1,144 @@
-# Example app with styled-components
+<!-- REPO TITLE -->
+<br />
+<p align="center">
+  <img src="readme/logo.svg" alt="Logo" height="80">
+  <h4 align="center">Covered | Technical task</h4>
+</p>
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
-
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
-
-## Preview
-
-Preview the example live on [StackBlitz](http://stackblitz.com/):
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-styled-components)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-### Try it on CodeSandbox
-
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
-
-### Notes
-
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
-
-<details>
-<summary>Click to expand workaround example</summary>
 <br />
 
-**components/StyledLink.js**
 
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
+**Links**:
 
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
+Deisgn prototypes:
 
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+* [User card mobile](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/tCVgMXuOw)
 
-  &:hover {
-    color: #40a9ff;
-  }
+* [User card desktop-prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/NjbIBXBjR)
 
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
+* [Reservation prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE)
 
-**pages/index.js**
+* [Framer file with options](https://framer.com/projects/covered-frontend--PHpWlGWg0EqwOqFUhEJe-954bw)
 
-```javascript
-import StyledLink from '../components/StyledLink'
+Code:
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
+* [Live demo](https://covered-frontend.vercel.app/)
 
-</details>
+
+<!-- ABOUT THE PROJECT -->
+## About the assignment
+Create an minimalistic online member card for our premium clients.
+On this card they can see:
+- their personal contact at covered with  name, email phone and whatsapp link.
+- an excerpt of their current booking with a link to all booking data.
+- loyalty points  
+- all info should fit in screen (iPhone 8 plus)
+- a personalised offer for up-sell (rent a boat / hire a chef / Champaign brunch etc.) *optional
+- if you have other ideas, go ahead. *optional
+
+
+## Installation and start
+To get a local copy up and running follow these steps:
+
+1. Clone the repo
+   ```sh
+   $ git clone https://github.com/francoromanol/covered-frontend.git
+   ```
+2. Install packages
+   ```sh
+   $ yarn install
+   ```
+3. Run
+    ```sh
+    $ yarn dev
+    ```
+
+Once started the client app should be available via [localhost:3000](http://localhost:3000).
+
+
+## Notes on the process
+### Design
+
+**Baackground**
+
+Covered has a clear, clean, lightweight and presentable design. The page should provide an effortless, intuitive and smooth user experience.
+
+**Brand identity**
+
+I used [Josefina Sans](https://fonts.google.com/specimen/Josefin+Sans?preview.text=Te%20tenemos%20cubierto&preview.text_type=custom), an open source font as an alternative to the covered font (grotesque).
+
+About the color palette, the covered #e1817c HEX color was preserved on details such as the avatar and some texts details, in this last case lightly changed due to accesibility concerns (contrast).
+
+**Interaction**
+
+The idea was to divide the user card into scalables – in the future and with more data – easy and readable sections:
+  * Client information
+  * Booking card
+  * Contact information
+
+This structure provides the user an intuitive layout where all their information is visible and where they can see an excerpt of their current booking with a link to all the booking data.
+
+**Other ideas**
+
+About the personalized offer for up-sell and I came to the conclusion that a link into the card was clear enough for this page and then show the offers on the booking data page (like airbnb or ryanair) --> [Find a simple example layout on this link](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE)
+
+
+About the other ideas I though that it would be nice to have a preview image of the villa in the reservation card, an "Our villas" link in the navbar and an Avatar with the initials of the client that will function as a menu.
+
+As an idea for the future, I would propose a bottom navbar on the mobile version (such as the airbnb one) since it gives a good and more real mobile experience and a page for the reservations and other for the client profile:
+<div align="center">
+  <img src="readme/navbar-proposal.png" alt="Airbnb bottom navbar" width="400">
+</div>
+
+
+**Made with**
+* [Material design](https://material.io/design) as a reference for design decisions (fonts, spacing, components).
+* [Framer](https://framer.com) for wireframing and design. It's a very useful and powerful tool since its made with react and it gives me the posibility to code the components inside a design tool (like Figma) and then export and import them in React easily. It's also a very nice tool to create a design system for a product.
+
+
+### Development
+
+The stack is next.js + styled-components. I am aware that it is an over-engineering for a page of these characteristics but I also understand that we would work with react / vue so it seemed correct to show my workflow and knowledge on this framework.
+
+**Codebase**
+
+All the components are stateless and propTypes is provided only on the Navbar and ClientCard (lack of time).
+
+Icons: there were only 3 icons so I didn't use a library, that's why there are 3 icon components.
+
+styled-components: since the components were not big I declare the styled within them so that the component is isolated and if there are duplicate components we can create a shared styled folder ([see example](https://github.com/francoromanol/covered-frontend/tree/main/components/styled)) and import them from there.
+
+
+**Key points**
+ * Semantic elements.
+ * Worked on accesibility.
+ * Lighthouse report on perfect score.
+ * SEO: only the user accesses so I did not give it much importance.
+ * Responsive design that works with mobile, tablet and desktop.
+ * Function to get formatted date (from timestamp).
+ * Function to get formatted phone from contact.
+ * Tests: It would be nice to make tests but I have omitted them due to lack of time.
+
+
+**Made with:**
+* [Next.js](https://nextjs.org/)
+* [styled-components](https://styled-components.com/)
+* [Vercel](https://vercel.com/) for deployment.
+
+
+&nbsp;
+### Thank you for your time!
+Hi Thomas and Preetam,
+
+Sorry for the delay and thank you again for the two weeks, I was very busy and it was helpful.
+
+I hope these notes are useful for you to read the exercise. If there is something that is not very clear, ask me and I will try to clarify it. I would love to receive your feedback!
+
+Have a great week!
+
+[Franco Romano Losada](mailto:francoromano1994@gmail.com)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- [product-screenshot]: readme/recording.gif -->
