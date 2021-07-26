@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --color-border: #DCDEE0;
     --color-border-light: hsl(0, 0%, 67%, 0.3);
     --color-shadow: hsl(6, 0%, 92%);
-    --color-primary-hover: #79a102;
+    --color-hover: hsl(6, 0%, 92%);
 
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
@@ -26,27 +26,10 @@ const GlobalStyles = createGlobalStyle`
     --spacing-xs: .25rem;
     --spacing-sm: .5rem;
     --spacing-base: 1rem;
-    --spacing-m: 1.5rem;
-    --spacing-l: 2rem;
-
-    // mobile
-
-
-    // tablet
-    @media (min-width: 768px) {
-    }
-
-    // horizontal tablet
-    @media (min-width: 1024px) {
-    }
-
-    // laptop
-    @media (min-width: 1200px) {
-    }
-
-    // desktop
-    @media (min-width: 1600px) {
-    }
+    --spacing-lg: 1.125rem;
+    --spacing-xl: 1.25rem;
+    --spacing-2xl: 1.5rem;
+    --spacing-3xl: 2rem;
   }
 
   html,
