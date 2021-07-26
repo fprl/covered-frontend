@@ -1,5 +1,6 @@
-/* Josefina Sans */
+/* Separate from GlobalStyles because of next.js bug with fonts */
 
+/* Josefina Sans */
 @font-face {
   font-family: 'Josefin Sans';
   src: url('/fonts/JosefinSans.ttf') format('truetype');
