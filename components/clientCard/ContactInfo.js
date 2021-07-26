@@ -21,6 +21,7 @@ const ContactInfo = ({ contact }) => {
         Contact me on{' '}
         <Link
           target="_blank"
+          rel="noopener"
           href={`https://api.whatsapp.com/send?phone=${contact.whatsapp}&text=Hi%20${contact.first_name},%20how%20are%20you?`}
         >
           whatsapp!

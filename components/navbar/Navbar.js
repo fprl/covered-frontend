@@ -12,7 +12,7 @@ const Navbar = ({ initials }) => {
     <Header>
       <Nav>
         <Flex grow={1}>
-          <Link href="#">
+          <Link href="#" aria-label="Go to our main page">
             <Logo />
           </Link>
         </Flex>
@@ -23,9 +23,9 @@ const Navbar = ({ initials }) => {
           >
             Our villas
           </Link>
-          <Button>
+          <Link icon href="tel:0620-245 635 64" aria-label="Call us">
             <PhoneIcon />
-          </Button>
+          </Link>
           <Avatar initials={initials} />
         </Divider>
       </Nav>
@@ -83,16 +83,9 @@ const Link = styled.a`
   display: ${p => (p.desktop ? 'none' : 'block')};
 
   font-size: var(--text-base);
-  margin-right: var(--spacing-base);
+  margin-right: ${p => (p.icon ? '' : 'var(--spacing-base)')};
 
   @media (min-width: 1024px) {
     display: ${p => (p.desktop ? 'block' : '')};
   }
-`
-
-const Button = styled.button`
-  padding: 0;
-
-  background-color: transparent;
-  border: transparent;
 `

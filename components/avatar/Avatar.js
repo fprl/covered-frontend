@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Avatar = ({ initials }) => {
   return (
-    <Button>
+    <Button aria-label="Profile menu">
       <Initials>{initials}</Initials>
     </Button>
   )

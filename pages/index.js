@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import data from '../services/data'
 
 import Navbar from '../components/navbar/Navbar'
@@ -10,6 +11,9 @@ export default function Home({ client }) {
 
   return (
     <>
+      <Head>
+        <title>Your member card - {`${clientInfo.first_name} ${clientInfo.last_name}`}</title>
+      </Head>
       <Navbar initials={initials} />
       <ClientCard client={client} />
     </>
