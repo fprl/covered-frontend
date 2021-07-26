@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import data from '../services/data'
 
 import Navbar from '../components/navbar/Navbar'
 import ClientCard from '../components/clientCard/ClientCard'
@@ -17,8 +17,11 @@ export default function Home({ client }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/client')
-  const client = await res.json()
+  // In a real scenario I would fetch the data from the /api
+  /* const res = await fetch('http://localhost:3000/api/client')
+  const client = await res.json() */
+
+  const client = data
 
   return {
     props: {
