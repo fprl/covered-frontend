@@ -59,7 +59,7 @@ Once started the client app should be available via [localhost:3000](http://loca
 ## Notes on the process
 ### Design
 
-**Baackground**
+**Background**
 
 Covered has a clear, clean, lightweight and presentable design. The page should provide an effortless, intuitive and smooth user experience.
 
