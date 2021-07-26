@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 import getFormattedDate from './utilities/getFormattedDate'
 
-import CalendarIcon from './CalendarIcon'
+import CalendarIcon from './icons/CalendarIcon'
+import ChevronLeft from './icons/ChevronLeft'
 
 const BookingInfo = ({ booking }) => {
   const startDate = getFormattedDate(booking.date_start)
@@ -13,19 +14,22 @@ const BookingInfo = ({ booking }) => {
       <Heading2>Your booking</Heading2>
       <Card>
         <CardImage>
-          <Image src="/images/image.jpg" />
+          <Image src="/images/image.jpg" alt={`${booking.name} image`} />
         </CardImage>
         <CardInfo>
           <Wrapper>
             <CardTitle>{booking.name}</CardTitle>
-            <CardText>
-              <CalendarIcon />
-              {startDate} - {endDate}
-            </CardText>
+            <CardLink href="#">
+              <CardText>
+                <CalendarIcon />
+                {startDate} - {endDate}
+              </CardText>
+              <ChevronLeft />
+            </CardLink>
           </Wrapper>
-          <CardFooter>
+          <CardFooter href="#">
             boats, picnic and more. <br />
-            <Link>Get experiences</Link>
+            <ColorText>Get experiences</ColorText>
           </CardFooter>
         </CardInfo>
       </Card>
@@ -41,8 +45,13 @@ const Section = styled.section`
 
   height: 65%;
   gap: var(--spacing-base);
+  padding-top: var(--spacing-base);
 
   font-weight: 300;
+
+  @media (min-width: 1024px) {
+    height: 60%;
+  }
 `
 
 const Heading2 = styled.h2`
@@ -52,11 +61,26 @@ const Heading2 = styled.h2`
 
 const Card = styled.article`
   height: 80%;
-
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 16px rgb(0 0 0 / 12%);
   border-radius: 12px;
 
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    min-width: 20rem;
+    max-width: 25rem;
+    height: 75%;
+  }
+
+  @media (min-width: 1024px) {
+    height: 85%;
+    max-width: 25%;
+  }
+
+  @media (min-width: 1600px) {
+    height: 80%;
+    max-width: 25rem;
+  }
 `
 
 const CardImage = styled.div`
@@ -78,7 +102,6 @@ const CardInfo = styled.div`
   justify-content: space-between;
 
   height: 50%;
-  padding: 1rem;
 `
 
 const Wrapper = styled.div`
@@ -86,31 +109,56 @@ const Wrapper = styled.div`
   flex-direction: column;
 
   gap: 0.5rem;
+  height: 100%;
 `
 
 const CardTitle = styled.p`
   font-size: var(--text-base);
   font-weight: 500;
   line-height: 1.2;
+
+  padding: 1rem;
+  padding-bottom: 0;
+`
+
+const CardLink = styled.a`
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 0.5rem;
+
+  height: 2rem;
+  padding: 1rem;
+
+  :hover {
+    background: var(--color-hover);
+  }
 `
 
 const CardText = styled.p`
+  flex-grow: 1;
   display: flex;
-  align-items: flex-start;
+
   gap: 0.5rem;
 
   font-size: var(--text-sm);
   line-height: 1.2;
 `
 
-const CardFooter = styled.div`
+const CardFooter = styled.a`
   padding-top: 0.875rem;
 
   font-size: var(--text-base);
   border-top: 1px solid var(--color-border-light);
+
+  padding: 1rem;
+
+  :hover {
+    background: var(--color-hover);
+  }
 `
 
-const Link = styled.a`
+const ColorText = styled.p`
   color: var(--color-text-details);
   text-decoration: underline;
 `

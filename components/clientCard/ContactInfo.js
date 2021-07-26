@@ -18,7 +18,13 @@ const ContactInfo = ({ contact }) => {
         </SubText>
       </Wrapper>
       <Text>
-        Contact me on <Link href={`https://api.whatsapp.com/send?phone=${contact.whatsapp}&text=Hi%20${contact.first_name},%20how%20are%20you?`}>whatsapp!</Link>
+        Contact me on{' '}
+        <Link
+          target="_blank"
+          href={`https://api.whatsapp.com/send?phone=${contact.whatsapp}&text=Hi%20${contact.first_name},%20how%20are%20you?`}
+        >
+          whatsapp!
+        </Link>
       </Text>
     </Section>
   )
@@ -29,12 +35,11 @@ export default ContactInfo
 const Section = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  height: 20%;
+  gap: var(--spacing-base);
   font-weight: 300;
-  padding-top: 24px;
 
+  padding-top: 24px;
   border-top: 1px solid var(--color-border-light);
 `
 
@@ -50,6 +55,10 @@ const Bold = styled.b`
 const Text = styled.p`
   font-size: var(--text-base);
   line-height: 1.2;
+
+  @media (min-width: 1024px) {
+    font-size: var(--text-sm);
+  }
 `
 
 const SubText = styled.p`
@@ -60,4 +69,5 @@ const SubText = styled.p`
 const Link = styled.a`
   color: var(--color-text-details);
   text-decoration: underline;
+  font-weight: 500;
 `
