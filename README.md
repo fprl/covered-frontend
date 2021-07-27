@@ -31,7 +31,7 @@
 
 &nbsp;
 <!-- ABOUT THE PROJECT -->
-### 1. About the assignment
+## 1. About the assignment
 Create an minimalistic online member card for our premium clients.
 On this card they can see:
 - their personal contact at covered with  name, email phone and whatsapp link.
@@ -44,7 +44,7 @@ On this card they can see:
 
 
 &nbsp;
-### 2. Installation and start
+## 2. Installation and start
 To get a local copy up and running follow these steps:
 
 1. Clone the repo
@@ -65,28 +65,28 @@ Once started the client app should be available via [localhost:3000](http://loca
 
 
 &nbsp;
-### 3. Design process
-* [User card mobile](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/tCVgMXuOw)
+## 3. Design process
+* [User card mobile-prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/tCVgMXuOw)
 
 * [User card desktop-prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/NjbIBXBjR)
 
-* [Reservation prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE) - just an idea to show the offer for up-sell and a possible layout for a booking information page.
+* [Reservation page prototype](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE) - just an idea to show the offer for up-sell and a possible layout for a booking information page.
 
 * [Framer file](https://framer.com/projects/covered-frontend--PHpWlGWg0EqwOqFUhEJe-954bw) - you can check other options that I worked on.
 
 
 
-#### Background
+### Background
 Covered has a clear, clean, lightweight and presentable design. The page should provide an effortless, intuitive and smooth user experience.
 
 
-#### Brand identity
+### Brand identity
 I used [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans?preview.text=Te%20tenemos%20cubierto&preview.text_type=custom), an open source font as an alternative to the covered font (grotesque).
 
 About the color palette, the covered #e1817c HEX color was preserved on details such as the avatar and some texts details, in this last case lightly changed due to accesibility concerns (contrast).
 
 
-#### Interaction and visual design
+### Interaction and visual design
 The idea is to divide the user card into scalables – in the future and with more data – easy and readable sections that summarize the key features of the product:
 
   * Client information
@@ -96,7 +96,7 @@ The idea is to divide the user card into scalables – in the future and with mo
 This structure provides the user an intuitive layout where all their information is visible (and fit) on the screen and where they can see an excerpt of their current booking with a link to all the booking data.
 
 
-#### Other ideas
+### Other ideas
 About the personalized offer for up-sell, I came to the conclusion that a link into the card was clear enough for this page and then show the offers on the booking data page (like airbnb or ryanair) --> [Find a simple example layout on this link](https://framer.com/share/covered-frontend--78DsQ3KMZTUp2a0FOnqd/U74ZgE7vE)
 
 
@@ -108,21 +108,21 @@ As an idea for the future, I would propose a bottom navbar on the mobile version
 </div>
 
 
-#### References and tools
+### References and tools
 * [Material design](https://material.io/design) as a reference for design decisions (fonts, spacing, components).
 * [Framer](https://framer.com) for wireframing and design. It's a very useful and powerful tool since its made with react and it gives me the posibility to code the components inside a design tool (like Figma) and then export and import them in React easily. It's also a very nice tool to create a design system for the product and then move it to [story book](https://storybook.js.org/).
 
 
 
 &nbsp;
-### 4. Development process
+## 4. Development process
 
 [Live demo](https://covered-frontend.vercel.app/)
 
 The stack is next.js + styled-components. I am aware that it is an over-engineering for a page of these characteristics but I also understand that we would work with react / vue so it seemed correct to show my workflow and knowledge on a JavaScript framework.
 
 
-#### Codebase
+### Codebase
 Organization structure: Since it was a simple project I keep it simple but If grows I would go with an [componentes-container solution](https://betterprogramming.pub/how-you-should-structure-your-react-applications-e7dd32375a98).
 
 Components: all components are stateless and propTypes is provided only on the Navbar and ClientCard (lack of time).
@@ -132,7 +132,7 @@ Icons: there were only 3 icons so I didn't use a library, that's why there are 3
 styled-components: since the components were not big I declare the styled within them so that the component is isolated and if there are duplicate components we can create a shared styled folder ([see example](https://github.com/francoromanol/covered-frontend/tree/main/components/styled)) and import them from there.
 
 
-#### Key points
+### Key points
  * Semantic elements.
  * Worked on accesibility.
  * Lighthouse report on perfect score.
@@ -143,14 +143,14 @@ styled-components: since the components were not big I declare the styled within
  * Tests: It would be nice to make tests but I have omitted them due to lack of time.
 
 
-#### Built with
+### Built with
 * [Next.js](https://nextjs.org/)
 * [styled-components](https://styled-components.com/)
 * [Vercel](https://vercel.com/) for deployment.
 
 
 &nbsp;
-### P.S
+## P.S
 Hi Thomas and Preetam,
 
 Sorry for the delay and thank you again for the two weeks, I was very busy and it was helpful.
